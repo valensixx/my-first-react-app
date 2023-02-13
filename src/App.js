@@ -50,7 +50,7 @@ const App = () => {
                 </div>
 
                 <div>
-                    <img src={movie1.Poster} alt={movie1.Title}/>
+                    <img src={movie1.Poster !== 'N/A' ? movie1.Poster: 'https://via.placeholder.com/400'} alt={movie1.Title}/>
                 </div>
             </div>
         </div>
