@@ -18,8 +18,14 @@ const App = () => {
     }, []);
 
     return(
-        <div className="app">
+        <div className = "app">
             <h1>MovieApp</h1>
+
+            <div className = "search">
+                <input 
+                    placeholder="Search for movies"
+                />
+            </div>
         </div>
     );
 }
