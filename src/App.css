@@ -78,3 +78,31 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
 }
+
+.movie{
+    width: 23rem;
+    height: 29rem;
+    margin: 2rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(132, 1, 99, 0.1);
+}
+
+.movie div:nth-of-type(1) {
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  color: #ffb9f4 ;
+}
+
+.movie:hover{
+  cursor: pointer;
+  box-shadow: 0px 30px 18px -8px rgba(155, 32, 124, 0.1);
+  transform: scale(1.05, 1.05);
+}
+
