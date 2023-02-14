@@ -64,8 +64,17 @@ h1 {
     background: #1f2123;
   }
 
-  .search img {
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
+ .search img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+ }
+
+.container {
+    width:100%;
+    margin-top:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

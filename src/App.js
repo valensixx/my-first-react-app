@@ -44,7 +44,7 @@ const App = () => {
             </div>
 
             <div className="container"> 
-                <MovieCard />
+                <MovieCard movie1={movie1} />
             </div>
         </div>
     );
