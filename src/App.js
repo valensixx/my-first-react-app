@@ -15,6 +15,7 @@ const movie1 = {   //this object is taken to be static from the api at the conso
 
 const App = () => {
     const [movies, setMovies] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     const searchMovies = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`); //this line will call the API response
@@ -35,13 +36,13 @@ const App = () => {
             <div className = "search">
                 <input 
                     placeholder="Search for movies"
-                    value="Batman"
-                    onChange={() => {}}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <img
                     src = {SearchIcon}
                     alt = "search icon img"
-                    onClick={() => {} }
+                    onClick={() => searchMovies(searchTerm)}
                 />
             </div>
 
@@ -58,8 +59,6 @@ const App = () => {
                         <h2>Error:404! No Movies Found!</h2>
                     </div>
                 )
-
-
             }
 
         </div>
