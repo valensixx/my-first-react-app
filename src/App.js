@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useState, useEffect} from "react";
 import MovieCard from "./MovieCard";
 import './App.css';
 import SearchIcon from './search.svg';
@@ -14,12 +14,14 @@ const movie1 = {   //this object is taken to be static from the api at the conso
     }   
 
 const App = () => {
+    const [movies, setMovies] = useState([]);
 
     const searchMovies = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`); //this line will call the API response
         const data = await response.json();
 
-        console.log(data.Search); //I want to see only the search results. In my case all Batman movies
+        setMovies(data.Search);
+        //console.log(data.Search); //I want to see only the search results. In my case all Batman movies
     }
 
     useEffect(() =>{
@@ -44,7 +46,7 @@ const App = () => {
             </div>
 
             <div className="container"> 
-                <MovieCard movie1={movie1} />
+                <MovieCard movie1={movies[0]} />
             </div>
         </div>
     );
